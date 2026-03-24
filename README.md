@@ -8,7 +8,7 @@ The GSM-batcorder 1.0 and the GSM-batcorder 4G 1.0 can both be connected to a Ra
 Currently we use a RPi3B+ running RaspberryPi OS Lite 64 bit: Debian GNU/Linux 12 (bookworm) from September 2025 for testing. The RPi is installed in an outdsoor isntallation using GSM-batcorder 1.0 setup with the box extension. The RPi connects to a local WiFi. Other forms of connection with a 4G or 5G modem were not tested, but should work as well.
 
 ### Connecting the GSM-batcorder to RPi
-The GSM-batcorder mus tbe mounted automatically whenever it publishes the availability of its SD card. We are using udiskie to detect and mount the card into the RPi filesystem.
+The GSM-batcorder must be mounted automatically whenever it publishes the availability of its SD card. We are using udiskie to detect and mount the card into the RPi filesystem. Note that it is necessary to connect as RO (read-only). Any writing operation on the SD-card that changes the content of the file directory will render the card unreadable by the GSM-batcorder. udiskie usually mounts RO.
 ```
 sudo apt-get install udiskie
 ```
