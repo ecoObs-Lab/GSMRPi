@@ -94,5 +94,7 @@ User=root
 WantedBy=media-GSM_BC.mount
 ```
 
-A simple example script is given with this README.
-
+A simple example script is given with this README. This script is called email.sh. To make it executable, it needs:
+```
+chmod +x <skript-name>
+```
